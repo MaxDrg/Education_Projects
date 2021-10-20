@@ -1,0 +1,19 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<h1>Transliterate</h1>
+<form action="trans" method="POST">
+    {% csrf_token %}
+    <h1>Enter the string:</h1>
+    <textarea name="str"></textarea><br><br>
+    <button type="submit">Транслитерировать</button>
+</form>
+<form action="eng" method="POST">
+    {% csrf_token %}
+    <h1>Enter the string on english:</h1>
+    <textarea name="str"></textarea><br><br>
+    <button type="submit">Транслитерировать</button>
+</form>
+
+{% endblock %}
